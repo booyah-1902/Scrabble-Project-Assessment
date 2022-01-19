@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\Scrabble Final.cs">
+	  <Compile Update="AboutForm.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="Scrabble Project Assessment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".cs">
