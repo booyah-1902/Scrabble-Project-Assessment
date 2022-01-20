@@ -15,20 +15,16 @@ namespace Scrabble_Project_Assessment
     public partial class Form1 : Form
     {
         /*  TODO: */
-        // when time ends, display highscore
-        // fix the letters in word rack so that double letters are not replaced as a whole - abu's code
-        //Aetshetics
-        // remove one heart and flash screen red twice (sound), penalise user (SOUND???!)
-        //"-5" fading out animation
+        // fix the letters in word rack so that double letters are not replaced as a whole
+
         string[] dictionary = System.IO.File.ReadAllLines("english3.txt");
-        //string[] alphabet = { "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "C", "C", "D", "D", "D", "D", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "F", "F", "G", "G", "G", "H", "H", "I", "I", "I", "I", "I", "I", "I", "I", "I", "J", "K", "L", "L", "L", "L", "M", "M", "N", "N", "N", "N", "N", "N", "O", "O", "O", "O", "O", "O", "O", "O", "P", "P", "Q", "R", "R", "R", "R", "R", "R", "S", "S", "S", "S", "T", "T", "T", "T", "T", "U", "U", "U", "U", "V", "V", "W", "W", "X", "Y", "Y", "Z" };
-        List<string> alphabet = new List<string>()
+  
         { "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "C", "C", "D", "D", "D", "D", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "F", "F", "G", "G", "G", "H", "H", "I", "I", "I", "I", "I", "I", "I", "I", "I", "J", "K", "L", "L", "L", "L", "M", "M", "N", "N", "N", "N", "N", "N", "O", "O", "O", "O", "O", "O", "O", "O", "P", "P", "Q", "R", "R", "R", "R", "R", "R", "S", "S", "S", "S", "T", "T", "T", "T", "T", "U", "U", "U", "U", "V", "V", "W", "W", "X", "Y", "Y", "Z" };
 
         int totalTally = 0;
         private int totalSeconds;
         string lowercaseUI;              // convert userinput to lowercase to match with the dictionary
-        string labelAsAWord;             // Make a word from the individual label entries - for use in function checkUserInputInLabels
+        string labelAsAWord;            // Make a word from the individual label entries - for use in function checkUserInputInLabels
         private Bitmap[] healthBar = { Scrabble_Project_Assessment.Properties.Resources.full_heart4, Scrabble_Project_Assessment.Properties.Resources.full_heart3, Scrabble_Project_Assessment.Properties.Resources.full_heart2, Scrabble_Project_Assessment.Properties.Resources.full_heart1, Scrabble_Project_Assessment.Properties.Resources.full_heart };
         int lastLife = 5;
         bool inSurvivalMode = false;
